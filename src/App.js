@@ -5,7 +5,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather />
+        <Weather defaultCity="Vancouver" />
         <footer className="mt-1">
           🤘🏼 This website was coded by Tali Berlin and is{" "}
           <a
