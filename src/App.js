@@ -6,8 +6,8 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Weather />
-        <footer>
-          🤘🏼 This site was coded by Tali Berlin and is{" "}
+        <footer className="mt-1">
+          🤘🏼 This website was coded by Tali Berlin and is{" "}
           <a
             href="https://github.com/taliberlin/weather-app-two"
             target="_blank"
