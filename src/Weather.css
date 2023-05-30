@@ -10,8 +10,9 @@
   line-height: 1.25;
 }
 .Weather img {
-  width: 64px;
-  height: 64px;
+  width: 90px;
+  position: relative;
+  bottom: 12px;
 }
 .Weather .temperature {
   font-size: 64px;
