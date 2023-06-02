@@ -1,31 +1,28 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./WeatherForecast.css";
+import ForecastDay from "./ForecastDay";
 
 export default function WeatherForecast(props) {
-  let [forecastWeatherData, setForecastWeatherData] = useState({
-    city: props.city,
-  });
+  let [loaded, setLoaded] = useState(false);
+  let [forecastWeatherData, setForecastWeatherData] = useState(null);
   function handleForecast(response) {
-    console.log(response.data);
+    setLoaded(true);
+    setForecastWeatherData(response.data.daily);
   }
-  const apiKey = "o599f3bbe3f722tbacc3ebf3032624a0";
-  const apiForecastUrl = `https://api.shecodes.io/weather/v1/forecast?query=${props.city}&key=${apiKey}&units=metric`;
-  axios.get(apiForecastUrl).then(handleForecast);
-  return (
-    <div className="WeatherForecast">
-      <div className="row">
-        <div className="col">
-          Thursday
-          <div>
-            <img src="/" />
-            <div>
-              <span className="forecast-temp-max">19°</span>
-              <span className="forecast-temp-min">17°</span>
-            </div>
+
+  if (loaded) {
+    return (
+      <div className="WeatherForecast">
+        <div className="row">
+          <div className="col">
+            <ForecastDay data={forecastWeatherData} />
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    const apiKey = "o599f3bbe3f722tbacc3ebf3032624a0";
+    const apiForecastUrl = `https://api.shecodes.io/weather/v1/forecast?query=${props.city}&key=${apiKey}&units=metric`;
+    axios.get(apiForecastUrl).then(handleForecast);
+  }
 }
