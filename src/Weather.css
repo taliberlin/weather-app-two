@@ -9,7 +9,7 @@
   list-style-type: none;
   line-height: 1.25;
 }
-.Weather img {
+.Weather .current-temp-icon {
   width: 90px;
   position: relative;
   bottom: 12px;
