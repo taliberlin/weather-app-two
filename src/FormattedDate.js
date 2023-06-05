@@ -19,9 +19,28 @@ export default function FormattedDate(props) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+  let months = [
+    "Jan",
+    "Feb",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let month = months[props.date.getMonth()];
+  let date = props.date.getDate();
   return (
     <div className="FormattedDate">
-      {day} {hours}:{minutes}
+      {day}, {month} {date}
+      <div>
+        {hours}:{minutes}
+      </div>
     </div>
   );
 }

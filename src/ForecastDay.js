@@ -2,6 +2,7 @@ import React from "react";
 import "./ForecastDay.css";
 
 export default function ForecastDay(props) {
+  let date = new Date(props.data.time * 1000);
   function maxTemperature() {
     let maxTemp = Math.round(props.data.temperature.maximum);
     return `${maxTemp}°`;
@@ -11,15 +12,26 @@ export default function ForecastDay(props) {
     return `${minTemp}°`;
   }
   function day() {
-    let date = new Date(props.data.time * 1000);
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     let day = date.getDay();
     return days[day];
+  }
+  function monthDay() {
+    let month = date.getMonth();
+    if (month < 10) {
+      month = `0${month}`;
+    }
+    let day = date.getDate();
+    if (day < 10) {
+      day = `0${day}`;
+    }
+    return `${month}/${day}`;
   }
   console.log(props.data[0]);
   return (
     <div className="ForecastDay">
       <div>{day()}</div>
+      <div className="forecast-date">{monthDay()}</div>
       <div>
         <img
           src={props.data.condition.icon_url}

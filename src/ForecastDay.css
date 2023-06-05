@@ -8,3 +8,6 @@
 .ForecastDay img {
   width: 70px;
 }
+.ForecastDay .forecast-date {
+  font-size: 12px;
+}
