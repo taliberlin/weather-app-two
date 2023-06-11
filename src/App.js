@@ -7,7 +7,15 @@ export default function App() {
       <div className="container">
         <Weather defaultCity="Vancouver" />
         <footer className="mt-1">
-          🤘🏼 This website was coded by Tali Berlin and is{" "}
+          🤘🏼 This website was coded by{" "}
+          <a
+            href="https://www.linkedin.com/in/taliberlin/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Tali Berlin
+          </a>{" "}
+          and is{" "}
           <a
             href="https://github.com/taliberlin/weather-app-two"
             target="_blank"
