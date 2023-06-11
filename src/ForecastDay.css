@@ -21,6 +21,9 @@
     position: relative;
     top: 9px;
   }
+  .ForecastDay img {
+    width: 65px;
+  }
   .ForecastDay .forecast-temp-max,
   .ForecastDay .forecast-temp-min {
     position: relative;
