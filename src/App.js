@@ -12,6 +12,7 @@ export default function App() {
             href="https://www.linkedin.com/in/taliberlin/"
             target="_blank"
             rel="noreferrer"
+            title="Tali Berlin's LinkedIn"
           >
             Tali Berlin
           </a>{" "}
@@ -20,6 +21,7 @@ export default function App() {
             href="https://github.com/taliberlin/weather-app-two"
             target="_blank"
             rel="noreferrer"
+            title="Source code on GitHub"
           >
             open-sourced
           </a>
