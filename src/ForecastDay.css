@@ -11,3 +11,19 @@
 .ForecastDay .forecast-date {
   font-size: 12px;
 }
+@media (max-width: 600px) {
+  .ForecastDay .day {
+    position: relative;
+    top: 9px;
+  }
+  .ForecastDay .forecast-date {
+    font-size: 11px;
+    position: relative;
+    top: 9px;
+  }
+  .ForecastDay .forecast-temp-max,
+  .ForecastDay .forecast-temp-min {
+    position: relative;
+    bottom: 4px;
+  }
+}

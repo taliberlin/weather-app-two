@@ -27,10 +27,9 @@ export default function ForecastDay(props) {
     }
     return `${month}/${day}`;
   }
-  console.log(props.data[0]);
   return (
     <div className="ForecastDay">
-      <div>{day()}</div>
+      <div className="day">{day()}</div>
       <div className="forecast-date">{monthDay()}</div>
       <div>
         <img
